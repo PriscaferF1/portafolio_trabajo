@@ -1,0 +1,426 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f4f4f4;
+  overflow-x: hidden;
+}
+/* Estilo inicial del header */
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    color: #fff; /* Color del texto inicial */
+    transition: background 0.3s ease, color 0.3s ease;
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+  }
+  
+  /* Estilo del header cuando se hace scroll */
+  #header.scrolled {
+    background: #fff; /* Fondo blanco */
+    color: #000; /* Color del texto al hacer scroll */
+  }
+  
+  #header nav {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #header nav ul li {
+    margin: 0.5rem 1rem;
+  }
+  
+  #header nav ul li a {
+    color: inherit; /* Cambiar de #fff a #000 en el estado scrolled */
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s;
+  }
+  
+  #header nav ul li a:hover {
+    color: #9b59b6;
+  }
+  
+  
+  /* Estilo del botón de alternancia (menu burger) */
+  #nav-toggle {
+    display: none; /* Oculto por defecto en dispositivos grandes */
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff; /* Color del ícono del botón */
+    background: transparent;
+    border: none;
+    padding: 10px;
+    z-index: 1001; /* Asegura que el botón esté encima del menú desplegable */
+  }
+  
+  /* Menú de navegación para dispositivos móviles */
+  #nav-menu {
+    display: none; /* Oculto por defecto en dispositivos pequeños */
+    flex-direction: column;
+    width: 100%;
+    background: #fff; /* Fondo blanco en el menú desplegable */
+    position: absolute;
+    top: 60px; /* Ajusta según la altura del header */
+    left: 0;
+    z-index: 1000; /* Asegura que el menú esté encima del contenido */
+  }
+  
+  /* Estilo cuando el menú está activo */
+  #nav-menu.active {
+    display: flex;
+  }
+  
+  /* Estilo para los ítems del menú en dispositivos móviles */
+  #nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #nav-menu ul li {
+    margin: 1rem 0;
+  }
+  
+  #nav-menu ul li a {
+    color: #000; /* Color de los enlaces en el menú desplegable */
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  /* Estilo de los enlaces al pasar el ratón en dispositivos móviles */
+  #nav-menu ul li a:hover {
+    color: #9b59b6;
+  }
+  
+
+section {
+  padding: 4rem 1rem;
+}
+
+#inicio {
+  background: url("../img/portada.jpg") no-repeat center center/cover;
+  color: #fff;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+#inicio h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 1s, transform 1s;
+}
+
+#inicio p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 1s 0.5s, transform 1s 0.5s;
+}
+
+#sobre-mi,
+#portafolio,
+#servicios,
+#tecnologias,
+#contacto {
+  background: #fff;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 80%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+}
+
+#sobre-mi h2,
+#portafolio h2,
+#servicios h2,
+#tecnologias h2,
+#contacto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #9b59b6;
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+}
+
+#sobre-mi p,
+#servicios p,
+#tecnologias p {
+  font-size: 1.2rem;
+}
+/* CSS para los íconos */
+.icon {
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  color: rgb(52 51 51 / 90%);
+  box-shadow: 0px 4px 6px rgba(35, 35, 35, 0.9);
+  margin: 10px; /* Espaciado entre íconos */
+  flex: 1 1 calc(20% - 20px); /* Ajusta el tamaño de los íconos para 5 por fila */
+  max-width: 120px; /* Asegúrate de que los íconos no sean demasiado grandes */
+  height: auto; /* Mantén la proporción del ícono */
+}
+
+.icon:hover {
+  transform: translateY(-8px);
+  color: #007bff;
+  box-shadow: 0px 8px 12px rgba(0, 123, 255, 0.2);
+}
+/* Contenedor de los íconos */
+.tecnologias-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Espaciado entre íconos */
+  }
+  
+
+.contact-info {
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.info-item i {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  color: #007bff;
+}
+
+.info-item span {
+  font-size: 1.1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon {
+  color: #333;
+  font-size: 1.5rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+  color: #007bff;
+  transform: scale(1.1);
+}
+
+.portafolio-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.portafolio-item div {
+  background: #9b59b6;
+  color: #fff;
+  padding: 1rem;
+  width: calc(50% - 2rem); /* Adjusted width for PC */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: scale(0.95);
+  transition: transform 0.3s;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portafolio-item div:hover {
+  transform: scale(1.05);
+}
+
+.portafolio-item div img {
+  max-width: 100%;
+  border-radius: 8px;
+  height: auto;
+}
+
+.portafolio-item div h3 {
+  margin-top: 1rem;
+}
+
+.portafolio-item div p {
+  margin-top: 0.5rem;
+}
+
+/* Estilos para el formulario de contacto */
+#contacto form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contacto form input,
+#contacto form textarea {
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+#contacto form input:focus,
+#contacto form textarea:focus {
+  border-color: #9b59b6;
+}
+
+#contacto form button {
+  background: #333;
+  color: #fff;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.3s;
+}
+
+#contacto form button:hover {
+  background: #9b59b6;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* Animaciones de aparición */
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  .portafolio-item div {
+    width: calc(100% - 2rem);
+  }
+
+  #inicio h1 {
+    font-size: 2rem;
+  }
+
+  #inicio p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    margin: 0.5rem 1rem;
+  }
+
+  .portafolio-item div {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  section {
+    padding: 2rem 1rem;
+  }
+
+  #inicio {
+    height: 50vh;
+  }
+
+  #inicio h1 {
+    font-size: 2rem;
+  }
+
+  #inicio p {
+    font-size: 1rem;
+  }
+
+  .portafolio-item div {
+    width: calc(50% - 2rem);
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 600px) {
+    .tecnologias-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+        gap: 10px; /* Espacio entre íconos */
+    }
+  }
+  
+  /* Mostrar el botón de alternancia en dispositivos pequeños */
+  @media (max-width: 768px) {
+    #nav-toggle {
+      display: block; /* Mostrar el botón en dispositivos pequeños */
+    }
+    #header nav ul {
+      display: none; /* Ocultar la navegación de escritorio */
+    }
+    #header nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Alinea el botón de alternancia y el menú */
+    }
+  }
+  
