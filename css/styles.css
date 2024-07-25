@@ -60,6 +60,7 @@ body {
     padding: 10px 15px;
     display: block;
     transition: color 0.3s;
+    font-weight: bold;
   }
   
   #header nav ul li a:hover {
