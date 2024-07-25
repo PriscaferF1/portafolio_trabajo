@@ -1,12 +1,17 @@
-/* Reset CSS */
+/* login.css */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+/* Estilos base */
+
 * {
+  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Red Hat Display", sans-serif;
   line-height: 1.6;
   color: #333;
   background: #f4f4f4;
@@ -256,7 +261,7 @@ section {
 }
 
 .portafolio-item div {
-  background: #9b59b6;
+  background: #fcfcfc;
   color: #fff;
   padding: 1rem;
   width: calc(50% - 2rem); /* Adjusted width for PC */
@@ -281,11 +286,13 @@ section {
 }
 
 .portafolio-item div h3 {
+  color: #9b59b6;
   margin-top: 1rem;
 }
 
 .portafolio-item div p {
   margin-top: 0.5rem;
+  color: #333;
 }
 
 /* Estilos para el formulario de contacto */
@@ -372,10 +379,14 @@ footer {
   nav ul li {
     margin: 0.5rem 1rem;
   }
-
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
   .portafolio-item div {
-    width: calc(50% - 2rem);
+    width: 100%; /* Los cards ocupan el ancho completo del contenedor en dispositivos móviles */
   }
+}
+
+
 }
 
 @media (orientation: landscape) and (max-height: 500px) {
