@@ -261,7 +261,7 @@ section {
 }
 
 .portafolio-item div {
-  background: #fcfcfc;
+  background: #ececec;
   color: #fff;
   padding: 1rem;
   width: calc(50% - 2rem); /* Adjusted width for PC */
