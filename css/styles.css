@@ -1,4 +1,3 @@
-/* login.css */
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 /* Estilos base */
 
@@ -387,7 +386,11 @@ footer {
   }
 }
 
-
+@media (max-width: 768px) {
+  .servicio div {
+    width: 100%; /* Los cards ocupan el ancho completo del contenedor en dispositivos móviles */
+  }
+}
 }
 
 @media (orientation: landscape) and (max-height: 500px) {
@@ -408,6 +411,10 @@ footer {
   }
 
   .portafolio-item div {
+    width: calc(100% - 2rem);
+  }
+
+  .servicio div {
     width: calc(100% - 2rem);
   }
 }
