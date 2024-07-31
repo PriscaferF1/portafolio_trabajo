@@ -387,11 +387,7 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
-  .servicio div {
-    width: 100%; /* Los cards ocupan el ancho completo del contenedor en dispositivos móviles */
-  }
-}
+
 }
 
 @media (orientation: landscape) and (max-height: 500px) {
@@ -412,10 +408,6 @@ footer {
   }
 
   .portafolio-item div {
-    width: calc(100% - 2rem);
-  }
-
-  .servicio div {
     width: calc(100% - 2rem);
   }
 }
