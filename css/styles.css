@@ -386,16 +386,11 @@ footer {
     width: 100%; /* Los cards ocupan el ancho completo del contenedor en dispositivos móviles */
   }
 }
-/* Ajustes para dispositivos móviles */
-@media (max-width: 768px) {
-  .servicio div {
-    width: 100%; /* Los cards ocupan el ancho completo del contenedor en dispositivos móviles */
-  }
-}
+
 
 }
 
-@media (orientation: landscape) and (max-height: 800px) {
+@media (orientation: landscape) and (max-height: 500px) {
   section {
     padding: 2rem 1rem;
   }
@@ -418,7 +413,7 @@ footer {
 }
 
 /* Estilos para pantallas pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .tecnologias-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
