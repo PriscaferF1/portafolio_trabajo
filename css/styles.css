@@ -410,6 +410,10 @@ footer {
   .portafolio-item div {
     width: calc(100% - 2rem);
   }
+
+  .servicio div {
+    width: calc(100% - 2rem);
+  }
 }
 
 /* Estilos para pantallas pequeñas */
