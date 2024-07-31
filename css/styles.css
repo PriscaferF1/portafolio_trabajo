@@ -436,3 +436,20 @@ footer {
     }
   }
   
+  /* Styles for screens smaller than 768px */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .portafolio-item,
+  .servicio {
+      flex-direction: column;
+  }
+
+  .portafolio-item > div,
+  .servicio {
+      width: 100%;
+  }
+}
