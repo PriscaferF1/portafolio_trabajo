@@ -1,11 +1,13 @@
 /* login.css */
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
 /* Estilos base */
+
 * {
+  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
@@ -15,110 +17,111 @@ body {
   background: #f4f4f4;
   overflow-x: hidden;
 }
-
 /* Estilo inicial del header */
 #header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: transparent;
-  color: #fff; /* Color del texto inicial */
-  transition: background 0.3s ease, color 0.3s ease;
-  z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
-}
-
-/* Estilo del header cuando se hace scroll */
-#header.scrolled {
-  background: #fff; /* Fondo blanco */
-  color: #000; /* Color del texto al hacer scroll */
-}
-
-#header nav {
-  display: flex;
-  justify-content: center;
-}
-
-#header nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-#header nav ul li {
-  margin: 0.5rem 1rem;
-}
-
-#header nav ul li a {
-  color: inherit; /* Cambiar de #fff a #000 en el estado scrolled */
-  text-decoration: none;
-  font-size: 1.1rem;
-  padding: 10px 15px;
-  display: block;
-  transition: color 0.3s;
-  font-weight: bold;
-}
-
-#header nav ul li a:hover {
-  color: #9b59b6;
-}
-
-/* Estilo del botón de alternancia (menu burger) */
-#nav-toggle {
-  display: none; /* Oculto por defecto en dispositivos grandes */
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: #fff; /* Color del ícono del botón */
-  background: transparent;
-  border: none;
-  padding: 10px;
-  z-index: 1001; /* Asegura que el botón esté encima del menú desplegable */
-}
-
-/* Menú de navegación para dispositivos móviles */
-#nav-menu {
-  display: none; /* Oculto por defecto en dispositivos pequeños */
-  flex-direction: column;
-  width: 100%;
-  background: #fff; /* Fondo blanco en el menú desplegable */
-  position: absolute;
-  top: 60px; /* Ajusta según la altura del header */
-  left: 0;
-  z-index: 1000; /* Asegura que el menú esté encima del contenido */
-}
-
-/* Estilo cuando el menú está activo */
-#nav-menu.active {
-  display: flex;
-}
-
-/* Estilo para los ítems del menú en dispositivos móviles */
-#nav-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#nav-menu ul li {
-  margin: 1rem 0;
-}
-
-#nav-menu ul li a {
-  color: #000; /* Color de los enlaces en el menú desplegable */
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-/* Estilo de los enlaces al pasar el ratón en dispositivos móviles */
-#nav-menu ul li a:hover {
-  color: #9b59b6;
-}
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    color: #fff; /* Color del texto inicial */
+    transition: background 0.3s ease, color 0.3s ease;
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+  }
+  
+  /* Estilo del header cuando se hace scroll */
+  #header.scrolled {
+    background: #fff; /* Fondo blanco */
+    color: #000; /* Color del texto al hacer scroll */
+  }
+  
+  #header nav {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #header nav ul li {
+    margin: 0.5rem 1rem;
+  }
+  
+  #header nav ul li a {
+    color: inherit; /* Cambiar de #fff a #000 en el estado scrolled */
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s;
+    font-weight: bold;
+  }
+  
+  #header nav ul li a:hover {
+    color: #9b59b6;
+  }
+  
+  
+  /* Estilo del botón de alternancia (menu burger) */
+  #nav-toggle {
+    display: none; /* Oculto por defecto en dispositivos grandes */
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff; /* Color del ícono del botón */
+    background: transparent;
+    border: none;
+    padding: 10px;
+    z-index: 1001; /* Asegura que el botón esté encima del menú desplegable */
+  }
+  
+  /* Menú de navegación para dispositivos móviles */
+  #nav-menu {
+    display: none; /* Oculto por defecto en dispositivos pequeños */
+    flex-direction: column;
+    width: 100%;
+    background: #fff; /* Fondo blanco en el menú desplegable */
+    position: absolute;
+    top: 60px; /* Ajusta según la altura del header */
+    left: 0;
+    z-index: 1000; /* Asegura que el menú esté encima del contenido */
+  }
+  
+  /* Estilo cuando el menú está activo */
+  #nav-menu.active {
+    display: flex;
+  }
+  
+  /* Estilo para los ítems del menú en dispositivos móviles */
+  #nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #nav-menu ul li {
+    margin: 1rem 0;
+  }
+  
+  #nav-menu ul li a {
+    color: #000; /* Color de los enlaces en el menú desplegable */
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  /* Estilo de los enlaces al pasar el ratón en dispositivos móviles */
+  #nav-menu ul li a:hover {
+    color: #9b59b6;
+  }
+  
 
 section {
   padding: 4rem 1rem;
@@ -185,7 +188,6 @@ section {
 #tecnologias p {
   font-size: 1.2rem;
 }
-
 /* CSS para los íconos */
 .icon {
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,
@@ -203,14 +205,14 @@ section {
   color: #007bff;
   box-shadow: 0px 8px 12px rgba(0, 123, 255, 0.2);
 }
-
 /* Contenedor de los íconos */
 .tecnologias-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px; /* Espaciado entre íconos */
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Espaciado entre íconos */
+  }
+  
 
 .contact-info {
   margin-bottom: 2rem;
@@ -298,153 +300,144 @@ section {
 #contacto form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
 
 #contacto form input,
 #contacto form textarea {
-  padding: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
   font-size: 1rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+#contacto form input:focus,
+#contacto form textarea:focus {
+  border-color: #9b59b6;
 }
 
 #contacto form button {
-  padding: 0.75rem;
-  font-size: 1rem;
-  background: #9b59b6;
+  background: #333;
   color: #fff;
+  padding: 0.7rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 1.1rem;
   transition: background 0.3s;
 }
 
 #contacto form button:hover {
-  background: #8e44ad;
+  background: #9b59b6;
 }
 
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-  #nav-toggle {
-    display: block; /* Mostrar el botón en dispositivos pequeños */
-  }
-
-  #header nav {
-    display: none; /* Ocultar la navegación por defecto en dispositivos pequeños */
-  }
-
-  #nav-menu {
-    display: flex; /* Mostrar el menú desplegable en dispositivos pequeños */
-  }
-
-  /* Estilos para dispositivos móviles */
-  .portafolio-item div {
-    width: calc(100% - 2rem); /* Ajustar el ancho a una sola columna en móviles */
-  }
-
-  .tecnologias-container {
-    flex-direction: column; /* Mostrar íconos en una sola columna */
-    align-items: center; /* Centrar los íconos */
-  }
-
-  .tecnologias-container .icon {
-    flex: none; /* Evitar que los íconos se ajusten en tamaño */
-    width: 100px; /* Ajustar el tamaño de los íconos */
-  }
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 10;
 }
 
-/* Animaciones */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateY(50px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
+/* Animaciones de aparición */
 .fade-in {
-  animation: fadeIn 1s ease-in-out forwards;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
-.slide-in {
-  animation: slideIn 1s ease-in-out forwards;
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  .portafolio-item div {
+    width: calc(100% - 2rem);
+  }
+
+  #inicio h1 {
+    font-size: 2rem;
+  }
+
+  #inicio p {
+    font-size: 1rem;
+  }
 }
 
-#inicio.fade-in {
-  opacity: 1;
-  transform: translateY(0);
+@media (max-width: 1024px) {
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    margin: 0.5rem 1rem;
+  }
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+  .portafolio-item div {
+    width: 100%; /* Los cards ocupan el ancho completo del contenedor en dispositivos móviles */
+  }
+}
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+  .servicio div {
+    width: 100%; /* Los cards ocupan el ancho completo del contenedor en dispositivos móviles */
+  }
 }
 
-#sobre-mi.fade-in,
-#portafolio.fade-in,
-#servicios.fade-in,
-#tecnologias.fade-in,
-#contacto.fade-in {
-  opacity: 1;
-  transform: translateY(0);
 }
 
-/* Estilo del botón de alternancia (menu burger) */
-#nav-toggle {
-  display: none; /* Oculto por defecto en dispositivos grandes */
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: #fff; /* Color del ícono del botón */
-  background: transparent;
-  border: none;
-  padding: 10px;
-  z-index: 1001; /* Asegura que el botón esté encima del menú desplegable */
+@media (orientation: landscape) and (max-height: 800px) {
+  section {
+    padding: 2rem 1rem;
+  }
+
+  #inicio {
+    height: 50vh;
+  }
+
+  #inicio h1 {
+    font-size: 2rem;
+  }
+
+  #inicio p {
+    font-size: 1rem;
+  }
+
+  .portafolio-item div {
+    width: calc(50% - 2rem);
+  }
 }
 
-/* Menú de navegación para dispositivos móviles */
-#nav-menu {
-  display: none; /* Oculto por defecto en dispositivos pequeños */
-  flex-direction: column;
-  width: 100%;
-  background: #fff; /* Fondo blanco en el menú desplegable */
-  position: absolute;
-  top: 60px; /* Ajusta según la altura del header */
-  left: 0;
-  z-index: 1000; /* Asegura que el menú esté encima del contenido */
-}
-
-/* Estilo cuando el menú está activo */
-#nav-menu.active {
-  display: flex;
-}
-
-/* Estilo para los ítems del menú en dispositivos móviles */
-#nav-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#nav-menu ul li {
-  margin: 1rem 0;
-}
-
-#nav-menu ul li a {
-  color: #000; /* Color de los enlaces en el menú desplegable */
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-/* Estilo de los enlaces al pasar el ratón en dispositivos móviles */
-#nav-menu ul li a:hover {
-  color: #9b59b6;
-}
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .tecnologias-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+        gap: 10px; /* Espacio entre íconos */
+    }
+  }
+  
+  /* Mostrar el botón de alternancia en dispositivos pequeños */
+  @media (max-width: 768px) {
+    #nav-toggle {
+      display: block; /* Mostrar el botón en dispositivos pequeños */
+    }
+    #header nav ul {
+      display: none; /* Ocultar la navegación de escritorio */
+    }
+    #header nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Alinea el botón de alternancia y el menú */
+    }
+  }
+  
